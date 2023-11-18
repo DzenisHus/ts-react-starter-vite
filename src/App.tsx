@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import './App.css';
+import stylesGLobal from './styles/global.module.scss';
 
 const App = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <>
-      <h1>React App</h1>
+    <div className={stylesGLobal.wrapper}>
+      <h1 className={stylesGLobal.title}>React App</h1>
       <p>
         <button type="button" onClick={() => setCount((c) => c + 1)}>
           Clicked
@@ -14,7 +14,7 @@ const App = () => {
           times
         </button>
       </p>
-    </>
+    </div>
   );
 };
 
